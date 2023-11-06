@@ -92,3 +92,78 @@ alert(
 }
 */
 // Здесь нам также нужно проверить key =="", чтобы исключить первый вызов, где значение value равно meetup.
+2;
+
+const sumTo = (n) => {
+  if (n === 1) {
+    return 1;
+  } else {
+    return (n += sumTo(n - 1));
+  }
+};
+
+console.log(sumTo(4));
+
+function fib(n) {
+  return n;
+}
+
+console.log(fib(3));
+const factorial = (n) => {
+  if (n === 1) {
+    return 1;
+  } else {
+    return (n *= factorial(n - 1));
+  }
+};
+console.log(factorial(5)); //
+let str = "123";
+console.log(str[1]);
+let list = {
+  value: 1,
+  next: {
+    value: 2,
+    next: {
+      value: 3,
+      next: {
+        value: 4,
+        next: null,
+      },
+    },
+  },
+};
+
+function printList(list) {
+  let tmp = list;
+
+  while (tmp) {
+    alert(tmp.value);
+    tmp = tmp.next;
+  }
+}
+
+printList(list);
+let list = {
+  value: 1,
+  next: {
+    value: 2,
+    next: {
+      value: 3,
+      next: {
+        value: 4,
+        next: null,
+      },
+    },
+  },
+};
+
+function printList(list) {
+  alert(list.value); // выводим текущий элемент
+
+  if (list.next) {
+    printList(list.next); // делаем то же самое для остальной части списка
+  }
+}
+
+printList(list);
+s
